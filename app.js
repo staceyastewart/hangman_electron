@@ -39,7 +39,19 @@ console.log(maxNumberOfRightGuesses)
 
 
 //take user input for each letter
-let guess = prompt("What letter do you want to guess")
+// let guess = alert("What letter do you want to guess")
+
+//button on click to console log the inner html
+
+let button = document.querySelectorAll("button")
+for (var i = 0; i < button.length; i++) {
+  button[i].addEventListener("click", function(e){
+  e.preventDefault()
+  console.log(this.innerHTML)
+  guessedLetter = this.innerHTML;
+})
+}
+
 
 //if string contains guessed letter
   //rightCount++
