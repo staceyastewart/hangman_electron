@@ -4,11 +4,22 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title></title>
+  <link href="https://fonts.googleapis.com/css?family=Lakki+Reddy" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<!-- <img src="../images/westernBackground.jpg"> -->
 
-<h1>WELCOME TO HANGMAN</h1>
+<h1 class="title">WELCOME TO HANGMAN</h1>
+
+<div class="gameContainer">
+<div class="imageContainer">
+  <div class="hangman">
+  </div>
+</div>
+
+<div class="lettersAndWord">
+
 
   <div id="gameBoard">
     <button class="button">A</button>
@@ -43,14 +54,10 @@
 
 </div>
 
-<div class="imageContainer">
-  <div class="hangman">
-
-  </div>
-</div>
-
 <div class="gameOutcome"></div>
-<input type="button" value="Play Again!" onClick="window.location.reload()">
+  <input id="playAgain" type="button" value="Play Again!" onClick="window.location.reload()">
+</div>
+</div>
 
 </body>
 <!-- electron uses JQuery differently - they conflict. Therefor, we have to use the below line to integrate -->

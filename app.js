@@ -2,7 +2,7 @@ $(document).ready(function() {
 let hangman = $(".hangman")
 let rightGuessCounter = 0;
 let wrongGuessCounter = 0;
-let arrayOfPhrases = ["cat", "dog", "armadillo", "chinchilla", "Matz is nice so we are nice", "Ruby on Rails", "Ottawa Canada", "Beijing China", "Jazz", "Rhythm", "JavaScript", "Stacey", "Laura", "Scott"]
+let arrayOfPhrases = ["cat", "dog", "armadillo", "chinchilla", "Ruby on Rails", "Ottawa Canada", "Beijing China", "Jazz", "Rhythm", "JavaScript", "Stacey", "Laura", "Scott"]
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -44,6 +44,7 @@ for (var i = 0; i < button.length; i++) {
       }
       if(rightGuessCounter === uniqueLetters.length){
         $(".gameOutcome").text("YOU WON!")
+        $("#playAgain").css('visibility', 'visible');
         for (var i = 0; i < randomPhrase.length; i++) {
           randomPhrase[i]
         }
@@ -56,6 +57,7 @@ for (var i = 0; i < button.length; i++) {
       hangman.attr('class', `hangman${wrongGuessCounter}`);
       if (wrongGuessCounter === 6){
         $(".gameOutcome").text("YOU LOST!")
+        $("#playAgain").css('visibility', 'visible');
         for (var i = 0; i < button.length; i++) {
           button[i].setAttribute("class", "clicked")
         }

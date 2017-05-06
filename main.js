@@ -5,8 +5,9 @@ var mainWindow = null;
 
 app.on("ready", function(){
   mainWindow = new BrowserWindow({
-    width:700,
-    height: 700
+    width:1300,
+    height: 800,
+    minWidth:700
     });
   // mainWindow.webContents.openDevTools();
   mainWindow.loadURL(`file://${__dirname}/app/index.html`);
