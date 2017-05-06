@@ -1,4 +1,5 @@
 # Our first app built with Electron
+![pets](https://media.giphy.com/media/nlOqrlN3S5zMY/giphy.gif)
 
 first, we ran the following
 ```
