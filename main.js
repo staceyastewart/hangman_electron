@@ -8,7 +8,8 @@ app.on("ready", function(){
   mainWindow = new BrowserWindow({
     width:1300,
     height: 800,
-    minWidth:700,
+    minWidth:1300,
+    minHeight: 800,
     titleBarStyle: 'hidden-inset'
     });
   // mainWindow.webContents.openDevTools();

@@ -43,7 +43,7 @@ for (var i = 0; i < button.length; i++) {
         }
       }
       if(rightGuessCounter === uniqueLetters.length){
-        $(".gameOutcome").text("YOU WON!")
+        $(".gameOutcome").text("(YOU WON!)")
         $("#playAgain").css('visibility', 'visible');
         for (var i = 0; i < randomPhrase.length; i++) {
           randomPhrase[i]
@@ -56,7 +56,7 @@ for (var i = 0; i < button.length; i++) {
       wrongGuessCounter++;
       hangman.attr('class', `hangman${wrongGuessCounter}`);
       if (wrongGuessCounter === 6){
-        $(".gameOutcome").text("YOU LOST!")
+        $(".gameOutcome").text("(YOU LOST!)")
         $("#playAgain").css('visibility', 'visible');
         for (var i = 0; i < button.length; i++) {
           button[i].setAttribute("class", "clicked")

@@ -1,12 +1,21 @@
 @font-face {
     font-family: 'westernFont';
-    src: url('../fonts/western.otf');
+    src: url('../fonts/Texas.otf');
 }
+@font-face {
+    font-family: 'westernLetters';
+    src: url('../fonts/deadsaloon.ttf');
+}
+@font-face {
+    font-family: 'westernOutcome';
+    src: url('../fonts/gameoutcome.ttf');
+}
+
 
 h1{
   color:white;
   font-family: 'westernFont';
-  font-size: 100px;
+  font-size: 85px;
 }
 body{
   /*background-color: #ccc;*/
@@ -49,7 +58,7 @@ button {
   -webkit-border-radius: 28;
   -moz-border-radius: 28;
   border-radius: 28px;
-  font-family: Courier New;
+  font-family: "westernLetters";
   color: #ffffff;
   font-size: 35px;
   padding: 10px 20px 10px 20px;
@@ -70,6 +79,7 @@ button:hover {
 .randomWord {
   padding: 50px;
   font-size: 30px;
+  font-family: "westernLetters";
 }
 
 .letterOnPage {
@@ -104,7 +114,7 @@ button:hover {
 
 .gameContainer {
   position: absolute;
-  top: 6%;
+  top: 5%;
 }
 
 .hangman{
@@ -182,6 +192,7 @@ button:hover {
   padding: 10px 20px 10px 20px;
   border: solid #1f628d 2px;
   text-decoration: none;
+  font-family: "westernLetters";
 }
 
 #playAgain:hover {
@@ -198,4 +209,5 @@ button:hover {
   font-size: 3em;
   color: red;
   margin-top: -46px;
+  font-family: 'westernOutcome';
 }
