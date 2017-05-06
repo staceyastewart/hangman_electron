@@ -1,6 +1,9 @@
 $(document).ready(function() {
 
 let body = $("body")
+let hangman = $(".hangman")
+let wins=0;
+let losses=0;
 
 
 //first load set wins and losses to 0
@@ -13,6 +16,7 @@ function getRandomInt(min, max) {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min)) + min;
 }
+
 
 let randomPhrase = arrayOfPhrases[getRandomInt(0,arrayOfPhrases.length)]
 console.log(randomPhrase)
@@ -59,19 +63,26 @@ for (var i = 0; i < button.length; i++) {
         }
       }
       if(rightGuessCounter === uniqueLetters.length){
-
+        wins++;
       }
     } else{ //you guessed wrong
       wrongGuessCounter++;
-      if (wrongGuessCounter === 5){
+      hangman.attr('class', `hangman${wrongGuessCounter}`);
+      if (wrongGuessCounter === 6){
         console.log("YOU LOSE SIR!")
+        losses++;
       }
     }
   }
 })
 }
 
-
+let reset = function(){
+  rightGuessCounter=0;
+  wrongGuessCounter=0;
+  hangman.attr('class', 'hangman');
+  let randomPhrase = arrayOfPhrases[getRandomInt(0,arrayOfPhrases.length)]
+}
 
 
 

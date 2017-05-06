@@ -71,3 +71,68 @@ button {
   margin-left: 5px;
   width: 1em;
 }
+
+.imageContainer{
+  height:220px;
+  width: 100px;
+  position:absolute;
+  top: 50%;
+  left: 35%;
+}
+
+.hangman{
+  background-image: url(../images/man.png);
+  background-position: 0px -407px;
+  zoom:1.3;
+  height:100%;
+  width:100%;
+}
+
+.hangman1{
+  background-image: url(../images/man.png);
+  background-position: -73px -407px;
+  zoom:1.3;
+  height:100%;
+  width:100%;
+}
+
+.hangman2{
+  background-image: url(../images/man.png);
+  background-position: -148px -407px;
+  zoom:1.3;
+  height:100%;
+  width:100%;
+}
+
+.hangman3{
+  background-image: url(../images/man.png);
+  background-position: -223px -407px;
+  zoom:1.3;
+  height:100%;
+  width:100%;
+}
+
+.hangman4{
+  background-image: url(../images/man.png);
+  background-position: -298px -407px;
+  zoom:1.3;
+  height:100%;
+  width:100%;
+}
+
+.hangman5{
+  background-image: url(../images/man.png);
+  background-position: -373px -407px;
+  zoom:1.3;
+  height:100%;
+  width:100%;
+
+}
+
+.hangman6{
+  background-image: url(../images/man.png);
+  background-position: -448px -407px;
+  zoom:1.3;
+  height:100%;
+  width:100%;
+}
