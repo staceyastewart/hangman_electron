@@ -8,7 +8,6 @@ let body = $("body")
 let rightGuessCounter = 0;
 let wrongGuessCounter = 0;
 let arrayOfPhrases = ["cat", "dog", "armadillo", "chinchilla", "fine scott you win"]
-//randomly select
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -17,8 +16,6 @@ function getRandomInt(min, max) {
 
 let randomPhrase = arrayOfPhrases[getRandomInt(0,arrayOfPhrases.length)]
 console.log(randomPhrase)
-
-
 
 let wordOnPage = $(".randomWord");
 let appendLetters = function(str) {
@@ -32,21 +29,10 @@ let appendLetters = function(str) {
 }
 appendLetters(randomPhrase);
 
-
-let arrayofChosenWords = randomPhrase.split(" ")
-console.log(arrayofChosenWords)
-let wordCount = arrayofChosenWords.length
-console.log(wordCount)
-
-// let totalLetterCount = function(arr){
-//   let letterCounter = 0
-//   for (var i = 0; i < arr.length; i++) {
-//     letterCounter += arr[i].length
-//   }
-//   console.log(letterCounter)
-//   return letterCounter
-// }
-// totalLetterCount(arrayofChosenWords)
+// let arrayofChosenWords = randomPhrase.split(" ")
+// console.log(arrayofChosenWords)
+// let wordCount = arrayofChosenWords.length
+// console.log(wordCount)
 
 //below finds unique characters
 //found on stack overflow
@@ -56,30 +42,29 @@ console.log(uniqueLetters)
 let maxNumberOfRightGuesses = uniqueLetters.length
 console.log(maxNumberOfRightGuesses)
 
-
-
-//take user input for each letter
-// let guess = alert("What letter do you want to guess")
-
-//button on click to console log the inner html
-
 let button = document.querySelectorAll("button")
 for (var i = 0; i < button.length; i++) {
   button[i].addEventListener("click", function(e){
   e.preventDefault()
   if(this.className != "clicked"){
-    console.log(this.innerHTML)
     guessedLetter = this.innerHTML.toLowerCase();
     this.setAttribute("class", "clicked");
-    console.log(this)
-    console.log(typeof(guessedLetter))
-    console.log(typeof(uniqueLetters))
+
     if(uniqueLetters.includes(guessedLetter)){
+      rightGuessCounter++;
       for (var i = 0; i < randomPhrase.length; i++) {
         let id = $(`#${i}`)
         if(id.text() === guessedLetter){
           id.toggleClass("correctGuess")
         }
+      }
+      if(rightGuessCounter === uniqueLetters.length){
+
+      }
+    } else{ //you guessed wrong
+      wrongGuessCounter++;
+      if (wrongGuessCounter === 5){
+        console.log("YOU LOSE SIR!")
       }
     }
   }
@@ -95,18 +80,7 @@ for (var i = 0; i < button.length; i++) {
 
 
 
-//if string contains guessed letter
-  //rightCount++
-  //unhide div with class letter
-//if string does not contain guessed letter
-  //wrongCount++
   //update sprite image
-//if rightCount === maxRight
-  //you win
-  //wins++
-//if wrongCount === maxWrong
-  //you lose
-  //loses++
 
 //create board of that many divs
 //assign each div a class of that letter
