@@ -62,6 +62,27 @@ for (var i = 0; i < button.length; i++) {
 })
 }
 
+let wordOnPage = $(".randomWord");
+
+
+
+let appendLetters = function(str) {
+  for (var i = 0; i < str.length; i++) {
+    if (str[i] === " "){
+      wordOnPage.append("<div class='spaceOnPage'>  </div>");
+    } else {
+    wordOnPage.append("<div class='letterOnPage'>" + str[i]+ "</div>");
+    }
+  }
+}
+appendLetters(randomPhrase);
+
+
+
+
+
+
+
 
 //if string contains guessed letter
   //rightCount++

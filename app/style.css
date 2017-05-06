@@ -45,3 +45,22 @@ button {
   padding: 5px 10px 5px 10px;
   text-decoration: none;
 }
+
+.randomWord {
+  padding: 50px;
+  font-size: 30px;
+}
+
+.letterOnPage {
+  display: inline-block;
+  border-bottom: 1px solid black;
+  margin-left: 5px;
+  width: 1em;
+  color: transparent;
+}
+
+.spaceOnPage {
+  display: inline-block;
+  margin-left: 5px;
+  width: 1em;
+}
