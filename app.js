@@ -5,9 +5,6 @@ let hangman = $(".hangman")
 let wins=0;
 let losses=0;
 
-
-//first load set wins and losses to 0
-//each reload
 let rightGuessCounter = 0;
 let wrongGuessCounter = 0;
 let arrayOfPhrases = ["cat", "dog", "armadillo", "chinchilla", "fine scott you win"]
@@ -17,9 +14,7 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-
 let randomPhrase = arrayOfPhrases[getRandomInt(0,arrayOfPhrases.length)]
-console.log(randomPhrase)
 
 let wordOnPage = $(".randomWord");
 let appendLetters = function(str) {
@@ -33,18 +28,11 @@ let appendLetters = function(str) {
 }
 appendLetters(randomPhrase);
 
-// let arrayofChosenWords = randomPhrase.split(" ")
-// console.log(arrayofChosenWords)
-// let wordCount = arrayofChosenWords.length
-// console.log(wordCount)
-
 //below finds unique characters
 //found on stack overflow
 var uniqueLetters = randomPhrase.split('').filter(function(item, i, ar){ return ar.indexOf(item) === i; }).join('').split(" ").join("");
-console.log(uniqueLetters)
 
-let maxNumberOfRightGuesses = uniqueLetters.length
-console.log(maxNumberOfRightGuesses)
+// let maxNumberOfRightGuesses = uniqueLetters.length
 
 let button = document.querySelectorAll("button")
 for (var i = 0; i < button.length; i++) {
@@ -64,13 +52,17 @@ for (var i = 0; i < button.length; i++) {
       }
       if(rightGuessCounter === uniqueLetters.length){
         wins++;
+        console.log(wins)
+        reset();
       }
-    } else{ //you guessed wrong
+    } else{
       wrongGuessCounter++;
       hangman.attr('class', `hangman${wrongGuessCounter}`);
       if (wrongGuessCounter === 6){
         console.log("YOU LOSE SIR!")
         losses++;
+        console.log(losses)
+        reset()
       }
     }
   }
@@ -78,24 +70,22 @@ for (var i = 0; i < button.length; i++) {
 }
 
 let reset = function(){
+  console.log("TESTER")
   rightGuessCounter=0;
   wrongGuessCounter=0;
   hangman.attr('class', 'hangman');
-  let randomPhrase = arrayOfPhrases[getRandomInt(0,arrayOfPhrases.length)]
+  clearLetters();
+  let randomPhrase = arrayOfPhrases[getRandomInt(0,arrayOfPhrases.length)];
+  appendLetters(randomPhrase);
 }
 
-
-
-
-
-
-
-
-  //update sprite image
-
-//create board of that many divs
-//assign each div a class of that letter
-
-
+let clearLetters = function(){
+  let clickedButtons = $("#clicked");
+  clickedButtons.removeClass().attr("class","button");
+  for (var i = 0; i < randomPhrase.length; i++) {
+      let id = $(`#${i}`);
+      id.remove();
+    }
+}
 
 }); //JQUERY closure
