@@ -1,0 +1,26 @@
+{
+  "name": "hangman_electron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "electron": "^1.6.6"
+  },
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . Hangman"
+  },
+  "devDependencies": {
+    "electron-packager": "^8.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/staceyastewart/hangman_electron.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/staceyastewart/hangman_electron/issues"
+  },
+  "homepage": "https://github.com/staceyastewart/hangman_electron#readme"
+}

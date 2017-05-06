@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link href="https://fonts.googleapis.com/css?family=Lakki+Reddy" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- <img src="../images/westernBackground.jpg"> -->
+
+<h1 class="title">WELCOME TO HANGMAN</h1>
+
+<div class="gameContainer">
+<div class="imageContainer">
+  <div class="hangman">
+  </div>
+</div>
+
+<div class="lettersAndWord">
+<!-- <body style="-webkit-app-region: drag"> -->
+
+
+  <div id="gameBoard">
+    <button class="button">A</button>
+    <button class="button">B</button>
+    <button class="button">C</button>
+    <button class="button">D</button>
+    <button class="button">E</button>
+    <button class="button">F</button>
+    <button class="button">G</button>
+    <button class="button">H</button>
+    <button class="button">I</button>
+    <button class="button">J</button>
+    <button class="button">K</button>
+    <button class="button">L</button>
+    <button class="button">M</button>
+    <button class="button">N</button>
+    <button class="button">O</button>
+    <button class="button">P</button>
+    <button class="button">Q</button>
+    <button class="button">R</button>
+    <button class="button">S</button>
+    <button class="button">T</button>
+    <button class="button">U</button>
+    <button class="button">V</button>
+    <button class="button">W</button>
+    <button class="button">X</button>
+    <button class="button">Y</button>
+    <button class="button">Z</button>
+  </div>
+
+<div class="randomWord">
+
+</div>
+
+<div class="gameOutcome"></div>
+  <input id="playAgain" type="button" value="Play Again!" onClick="window.location.reload()">
+</div>
+</div>
+
+</body>
+<!-- electron uses JQuery differently - they conflict. Therefor, we have to use the below line to integrate -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js" onload="window.$ = window.jQuery = module.exports;"></script>
+<script type="text/javascript" src="../app.js"></script>
+</html>
