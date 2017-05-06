@@ -1,3 +1,8 @@
+$(document).ready(function() {
+
+let body = $("body")
+
+
 //first load set wins and losses to 0
 //each reload
 let rightGuessCounter = 0;
@@ -12,6 +17,7 @@ function getRandomInt(min, max) {
 
 let randomPhrase = arrayOfPhrases[getRandomInt(0,arrayOfPhrases.length)]
 console.log(randomPhrase)
+
 
 let arrayofChosenWords = randomPhrase.split(" ")
 console.log(arrayofChosenWords)
@@ -47,8 +53,12 @@ let button = document.querySelectorAll("button")
 for (var i = 0; i < button.length; i++) {
   button[i].addEventListener("click", function(e){
   e.preventDefault()
-  console.log(this.innerHTML)
-  guessedLetter = this.innerHTML;
+  if(this.className != "clicked"){
+    console.log(this.innerHTML)
+    guessedLetter = this.innerHTML;
+    this.setAttribute("class", "clicked");
+    console.log(this)
+  }
 })
 }
 
@@ -68,3 +78,7 @@ for (var i = 0; i < button.length; i++) {
 
 //create board of that many divs
 //assign each div a class of that letter
+
+
+
+}); //JQUERY closure

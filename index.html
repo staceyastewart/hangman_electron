@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<h1>HELLO SCOTT!!! I AM TRYING TO MAKE YOU FEEL BAD</h1>
+<h1>WELCOME TO HANGMAN</h1>
 
   <div id="gameBoard">
     <button class="button" id="A">A</button>
@@ -41,5 +41,7 @@
 
 
 </body>
+<!-- electron uses JQuery differently - they conflict. Therefor, we have to use the below line to integrate -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js" onload="window.$ = window.jQuery = module.exports;"></script>
 <script type="text/javascript" src="app.js"></script>
 </html>
