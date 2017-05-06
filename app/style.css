@@ -1,6 +1,11 @@
+@font-face {
+    font-family: 'westernFont';
+    src: url('../fonts/western.otf');
+}
+
 h1{
   color:white;
-  font-family: 'Lakki Reddy', cursive;
+  font-family: 'westernFont';
   font-size: 100px;
 }
 body{
