@@ -19,6 +19,20 @@ let randomPhrase = arrayOfPhrases[getRandomInt(0,arrayOfPhrases.length)]
 console.log(randomPhrase)
 
 
+
+let wordOnPage = $(".randomWord");
+let appendLetters = function(str) {
+  for (var i = 0; i < str.length; i++) {
+    if (str[i] === " "){
+      wordOnPage.append("<div class='spaceOnPage'>  </div>");
+    } else {
+    wordOnPage.append("<div class='letterOnPage' id='"+ i +"'>" + str[i]+ "</div>");
+    }
+  }
+}
+appendLetters(randomPhrase);
+
+
 let arrayofChosenWords = randomPhrase.split(" ")
 console.log(arrayofChosenWords)
 let wordCount = arrayofChosenWords.length
@@ -55,27 +69,24 @@ for (var i = 0; i < button.length; i++) {
   e.preventDefault()
   if(this.className != "clicked"){
     console.log(this.innerHTML)
-    guessedLetter = this.innerHTML;
+    guessedLetter = this.innerHTML.toLowerCase();
     this.setAttribute("class", "clicked");
     console.log(this)
+    console.log(typeof(guessedLetter))
+    console.log(typeof(uniqueLetters))
+    if(uniqueLetters.includes(guessedLetter)){
+      for (var i = 0; i < randomPhrase.length; i++) {
+        let id = $(`#${i}`)
+        if(id.text() === guessedLetter){
+          id.toggleClass("correctGuess")
+        }
+      }
+    }
   }
 })
 }
 
-let wordOnPage = $(".randomWord");
 
-
-
-let appendLetters = function(str) {
-  for (var i = 0; i < str.length; i++) {
-    if (str[i] === " "){
-      wordOnPage.append("<div class='spaceOnPage'>  </div>");
-    } else {
-    wordOnPage.append("<div class='letterOnPage'>" + str[i]+ "</div>");
-    }
-  }
-}
-appendLetters(randomPhrase);
 
 
 

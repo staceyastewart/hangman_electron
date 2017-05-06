@@ -64,3 +64,10 @@ button {
   margin-left: 5px;
   width: 1em;
 }
+
+.correctGuess{
+  color: black;
+  display: inline-block;
+  margin-left: 5px;
+  width: 1em;
+}
