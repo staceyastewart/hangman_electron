@@ -54,7 +54,7 @@ Then in our package.JSON we added a start script within the scripts object that 
 ```
 
 Then we created our index.html file in our app folder and wrote in some text to test.
-Then to open your app, you just run:
+Then to open our app, you just run:
 ```
 npm start
 ```
