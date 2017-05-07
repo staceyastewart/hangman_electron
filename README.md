@@ -1,5 +1,5 @@
 # Our first app built with Electron
-![photoOfOurApp](images/startOfGame)
+![photoOfOurApp](images/startOfGame.png)
 
 
 
