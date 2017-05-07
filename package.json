@@ -6,9 +6,14 @@
   "dependencies": {
     "electron": "^1.6.6"
   },
-  "devDependencies": {},
   "scripts": {
-    "start":"electron ."
+    "start": "electron .",
+    "package": "asar pack Hangman.app/Contents/Resources/app Hangman-darwin-x64/Hangman.app/Contents/Resources/app.asar",
+    "build": "electron-packager . Hangman"
+  },
+  "devDependencies": {
+    "asar": "^0.13.0",
+    "electron-packager": "^8.7.0"
   },
   "repository": {
     "type": "git",
