@@ -1,7 +1,7 @@
 # Our first app built with Electron
 ![photoOfOurApp](images/startOfGame.png)
 
-We were tasked with learning Electron and building our first app with it over the course of a weekend.
+We were tasked with learning Electron and building our first app with it over the course of a weekend. Our group pair programmed the entire app.
 
 For the docs on Electron please [click here](https://github.com/electron/electron).
 
@@ -18,7 +18,7 @@ npm install electron --save-dev
 npm install electron -g
 ```
 
-You can also run the following (instead of the above):
+You can also run the following (instead of the above) for a pre-buit version of electron:
 
 ```
 npm init
@@ -26,7 +26,7 @@ npm init
 npm install electron-prebuilt --save-dev
 ```
 
-We then create a main.js file and wrote the following. We left in the openDevTools line when we were getting started so that the dev tools automatically opened whenever we opened the app.
+We then created a main.js file and wrote the below. We left in the openDevTools line when we were getting started so that the dev tools automatically opened whenever we opened the app. We also set up a minimum width and height, which is not necessary for setup.
 
 ```
 const electron = require("electron");
@@ -40,21 +40,31 @@ app.on("ready", function(){
     width:1300,
     height: 800,
     minWidth:1300,
-    minHeight: 800,
-    titleBarStyle: 'hidden-inset'
+    minHeight: 800
     });
   // mainWindow.webContents.openDevTools();
   mainWindow.loadURL(`file://${__dirname}/app/index.html`);
 });
 ```
 
-Then in your package.JSON you need a start script that looks like the following:
+Then in our package.JSON we added a start script within the scripts object that looks like the below:
 
 ```
 "start": "electron ."
 ```
 
+Then we created our index.html file in our app folder and wrote in some text to test.
+Then to open your app, you just run:
+```
+npm start
+```
+
+It was as simple as that to build our first Electron app! We then pair programmed the logic for our Hangman app which was all written in JS:
+
+
 ![photoOfOurApp](images/winningGame.png)
+
+After creating our app, we used [Electron Packager](https://github.com/electron-userland/electron-packager) to package our app. 
 
 
 
