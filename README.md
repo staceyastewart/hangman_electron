@@ -8,18 +8,6 @@ For the docs on Electron please [click here](https://github.com/electron/electro
 
 First, we set up our repo and then ran the following in our command line: 
 
-```sh
-npm init
-
-# Install as a development dependency
-npm install electron --save-dev
-
-# Install the `electron` command globally in your $PATH
-npm install electron -g
-```
-
-You can also run the following (instead of the above) for a pre-buit version of electron:
-
 ```
 npm init
 
@@ -57,6 +45,12 @@ Then we created our index.html file in our app folder and wrote in some text to 
 Then to open our app, you just run:
 ```
 npm start
+```
+
+JQuery had to be set up slightly differently so we put the following script tag in our HTML:
+
+```
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js" onload="window.$ = window.jQuery = module.exports;"></script>
 ```
 
 It was as simple as that to build our first Electron app! We then pair programmed the logic for our Hangman app which was all written in JS:
